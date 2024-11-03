@@ -1,0 +1,26 @@
+# === General ===
+**/.DS_Store
+
+# === Android ===
+**/.idea/
+**/.gradle/
+**/.externalNativeBuild/
+**/build/
+**/main/obj
+**/main/libs
+**/*.iml
+
+# === iOS ===
+**/xcuserdata/
+
+# === Tizen ===
+Tizen/DevApp/Debug
+Tizen/**/.rds_delta
+Tizen/**/.sdk_delta.info
+Tizen/**/.sign
+Tizen/**/crash-info
+
+# === Matlab ===
+*preamble.dat
+*sync.cpp
+**/*.m~

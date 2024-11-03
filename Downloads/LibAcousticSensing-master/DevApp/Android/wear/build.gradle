@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 33
+    namespace 'umich.cse.yctung.wear'
+
+    defaultConfig {
+        applicationId "umich.cse.yctung.wear"
+        minSdkVersion 33
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':libacousticsensing')
+    implementation 'com.google.android.gms:play-services-wearable:latest_version' // replace with the latest version
+    // Replace 'provided' with 'compileOnly' if needed
+    compileOnly 'com.google.android.wearable:wearable:2.0.0'
+    implementation 'com.google.android.support:wearable:2.0.0'
+}
+
